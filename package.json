@@ -1,0 +1,93 @@
+{
+  "name": "code-email-pocketknife",
+  "displayName": "code-email-pocketknife",
+  "description": "Email tools in the editor",
+  "version": "0.0.1",
+  "publisher": "jacobx1",
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:editor.qpEncode",
+    "onCommand:editor.qpDecode",
+    "onCommand:editor.b64Encode",
+    "onCommand:editor.b64Decode"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "editor.qpEncode",
+        "title": "QP Encode"
+      },
+      {
+        "command": "editor.qpDecode",
+        "title": "QP Decode"
+      },
+      {
+        "command": "editor.b64Encode",
+        "title": "B64 Encode"
+      },
+      {
+        "command": "editor.b64Decode",
+        "title": "B64 Decode"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "editor.qpEncode",
+          "group": "1_modification"
+        },
+        {
+          "command": "editor.qpDecode",
+          "group": "1_modification"
+        },
+        {
+          "command": "editor.b64Encode",
+          "group": "1_modification"
+        },
+        {
+          "command": "editor.b64Decode",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "@types/quoted-printable": "^0.2.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.21"
+  },
+  "dependencies": {
+    "quoted-printable": "^1.0.1"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
