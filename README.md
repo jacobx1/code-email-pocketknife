@@ -1,5 +1,7 @@
 # Email Pocketknife
 
+[![Build Status](https://travis-ci.org/jacobx1/code-email-pocketknife.svg?branch=master)](https://travis-ci.org/jacobx1/code-email-pocketknife)
+
 Handle email data in vscode
 
 ## Features
