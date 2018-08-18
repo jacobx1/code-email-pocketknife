@@ -1,8 +1,8 @@
 {
   "name": "code-email-pocketknife",
-  "displayName": "code-email-pocketknife",
+  "displayName": "Email Pocketknife",
   "description": "Email tools in the editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/jacobx1/code-email-pocketknife.git"
